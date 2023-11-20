@@ -1,6 +1,6 @@
 import express from 'express';
 import { NoticeController } from './notice.controller.js';
-import { NoticeImage } from '../../middlewares/uploader/teacherFileUploader.js';
+import { NoticeImage } from '../../middlewares/uploader/noticeFileUploader.js';
 
 const router = express.Router();
 

@@ -1,6 +1,6 @@
 import ApiError from '../../../errors/ApiError.js';
 import { paginationHelpers } from '../../../helpers/paginationHelper.js';
-import { NoticeImage } from '../../middlewares/uploader/teacherFileUploader.js';
+import { NoticeImage } from '../../middlewares/uploader/noticeFileUploader.js';
 import { noticeSearchableField } from './notice.constant.js';
 import { Notice } from './notice.model.js';
 
