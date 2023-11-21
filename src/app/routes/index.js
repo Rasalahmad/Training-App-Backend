@@ -2,7 +2,8 @@ import express from 'express';
 import { NoticeRoutes } from '../modules/notice/notice.route.js';
 import { TeacherRoutes } from '../modules/teacher/teacher.route.js';
 import { GalleryRoutes } from '../modules/gallery/gallery.route.js';
-import { ResultRoutes } from '../modules/reasult/result.route.js';
+import { ResultRoutes } from '../modules/result/result.route.js';
+import { BannerRoutes } from '../modules/banner/banner.route.js';
 
 const routes = express.Router();
 
@@ -22,6 +23,10 @@ const moduleRoutes = [
   {
     path: '/result',
     routes: ResultRoutes,
+  },
+  {
+    path: '/banner',
+    routes: BannerRoutes,
   },
 ];
 
