@@ -21,6 +21,9 @@ const teacherSchema = new Schema(
     image: {
       type: String,
     },
+    teacherId: {
+      type: String,
+    },
   },
   {
     timestamps: true,

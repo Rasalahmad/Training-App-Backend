@@ -15,6 +15,10 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// access static file
+app.use(express.static('src/uploads'));
+app.use('/teachers', express.static('teachers'));
+
 app.use('/api/v1', routes);
 
 //global error handler
