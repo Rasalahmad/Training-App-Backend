@@ -18,6 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 // access static file
 app.use(express.static('src/uploads'));
 app.use('/teachers', express.static('teachers'));
+app.use('/notices', express.static('notices'));
+app.use('/gallery', express.static('gallery'));
+app.use('/result', express.static('result'));
 
 app.use('/api/v1', routes);
 
