@@ -22,6 +22,7 @@ app.use('/notices', express.static('notices'));
 app.use('/gallery', express.static('gallery'));
 app.use('/result', express.static('result'));
 app.use('/courses', express.static('courses'));
+app.use('/banners', express.static('banners'));
 
 app.use('/api/v1', routes);
 
