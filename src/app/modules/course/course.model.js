@@ -15,7 +15,8 @@ const courseSchema = new Schema(
       required: true,
     },
     instructor: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: 'Teacher',
     },
     duration: {
       type: String,
@@ -23,16 +24,9 @@ const courseSchema = new Schema(
     image: {
       type: String,
     },
-    module: [
-      {
-        title: {
-          type: String,
-        },
-        desc: {
-          type: String,
-        },
-      },
-    ],
+    module: {
+      type: String,
+    },
   },
   {
     timestamps: true,

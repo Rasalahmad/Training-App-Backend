@@ -47,7 +47,8 @@ const getCourse = async (filters, paginationOption) => {
   const result = await Course.find(whereCondition)
     .sort(sortConditions)
     .skip(skip)
-    .limit(limit);
+    .limit(limit)
+    .populate('instructor');
 
   const total = await Course.countDocuments(whereCondition);
 
@@ -91,7 +92,7 @@ const deleteCourse = async id => {
   }
 
   if (course.image) {
-    NoticeImage.deleteImage(course.image);
+    CourseImage.deleteImage(course.image);
   }
 
   const result = await Course.findByIdAndDelete({ _id: id });
