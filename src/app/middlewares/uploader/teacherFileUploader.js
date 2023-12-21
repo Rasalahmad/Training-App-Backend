@@ -16,15 +16,12 @@ function uploadImage(req, res, next) {
   // call the middleware function with two file fields
   upload.fields([{ name: 'image', maxCount: 1 }])(req, res, err => {
     if (err) {
-      console.log(err);
       throw new ApiError(500, err.message);
     } else {
-      const image = req.files['image'];
-
-      if (!image) {
-        next();
+      if (req.files && req.files['image']) {
+        const image = req.files['image'];
+        req.image = image[0]?.filename;
       }
-      req.image = image[0].filename;
       next();
     }
   });
