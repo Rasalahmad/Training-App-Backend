@@ -18,11 +18,10 @@ function uploadImage(req, res, next) {
     if (err) {
       throw new ApiError(500, err.message);
     } else {
-      const image = req?.files['image'];
-      if (!image) {
-        next();
+      if (req.files && req.files['image']) {
+        const image = req.files['image'];
+        req.image = image[0]?.filename;
       }
-      req.image = image[0].filename;
       next();
     }
   });

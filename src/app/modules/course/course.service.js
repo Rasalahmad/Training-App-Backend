@@ -77,7 +77,6 @@ const updateCourse = async (id, payload) => {
   if (payload.image && course.image) {
     CourseImage.deleteImage(course.image);
   }
-
   const result = await Course.findByIdAndUpdate({ _id: id }, payload, {
     new: true,
   });
