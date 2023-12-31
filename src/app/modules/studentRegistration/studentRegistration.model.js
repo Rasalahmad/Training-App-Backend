@@ -6,6 +6,10 @@ const studentRegistrationSchema = new Schema(
       type: String,
       required: true,
     },
+    studentId: {
+      type: String,
+      required: true,
+    },
     image: {
       type: String,
       required: true,
