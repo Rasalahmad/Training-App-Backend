@@ -48,7 +48,7 @@ const getRegisteredStudents = async (filters, paginationOption) => {
     .sort(sortConditions)
     .skip(skip)
     .limit(limit)
-    .populate('Course');
+    .populate('course');
 
   const total = await StudentRegistration.countDocuments(whereCondition);
 

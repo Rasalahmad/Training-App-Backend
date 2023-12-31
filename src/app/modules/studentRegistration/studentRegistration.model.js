@@ -71,6 +71,7 @@ const studentRegistrationSchema = new Schema(
     paymentStatus: {
       type: String,
       enum: ['pending', 'completed'],
+      default: 'pending',
     },
     paid: {
       type: Number,

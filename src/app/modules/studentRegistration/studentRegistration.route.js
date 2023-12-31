@@ -5,7 +5,7 @@ import { StudentRegistrationController } from './studentRegistration.controller.
 const router = express.Router();
 
 router.post(
-  '/add-course',
+  '/register-student',
   registeredStudentImage.uploadImage,
   StudentRegistrationController.studentRegistration
 );

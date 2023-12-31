@@ -35,7 +35,7 @@ const moduleRoutes = [
     routes: CourseRoutes,
   },
   {
-    path: '/register-student',
+    path: '/register',
     routes: RegisterStudentRoutes,
   },
 ];
