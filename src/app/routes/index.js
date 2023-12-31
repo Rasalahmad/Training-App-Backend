@@ -5,6 +5,7 @@ import { GalleryRoutes } from '../modules/gallery/gallery.route.js';
 import { ResultRoutes } from '../modules/result/result.route.js';
 import { BannerRoutes } from '../modules/banner/banner.route.js';
 import { CourseRoutes } from '../modules/course/course.route.js';
+import { RegisterStudentRoutes } from '../modules/studentRegistration/studentRegistration.route.js';
 
 const routes = express.Router();
 
@@ -32,6 +33,10 @@ const moduleRoutes = [
   {
     path: '/course',
     routes: CourseRoutes,
+  },
+  {
+    path: '/register-student',
+    routes: RegisterStudentRoutes,
   },
 ];
 
