@@ -57,6 +57,7 @@ const studentRegistrationSchema = new Schema(
     },
     dateOfBirth: {
       type: Date,
+      required: true,
     },
     email: {
       type: String,

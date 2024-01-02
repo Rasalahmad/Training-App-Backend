@@ -6,6 +6,7 @@ import { ResultRoutes } from '../modules/result/result.route.js';
 import { BannerRoutes } from '../modules/banner/banner.route.js';
 import { CourseRoutes } from '../modules/course/course.route.js';
 import { RegisterStudentRoutes } from '../modules/studentRegistration/studentRegistration.route.js';
+import { BatchRoutes } from '../modules/batch/batch.route.js';
 
 const routes = express.Router();
 
@@ -37,6 +38,10 @@ const moduleRoutes = [
   {
     path: '/register',
     routes: RegisterStudentRoutes,
+  },
+  {
+    path: '/batch',
+    routes: BatchRoutes,
   },
 ];
 
