@@ -68,6 +68,12 @@ const studentRegistrationSchema = new Schema(
     course: {
       type: Schema.Types.ObjectId,
       ref: 'Course',
+      required: true,
+    },
+    batch: {
+      type: Schema.Types.ObjectId,
+      ref: 'Batch',
+      required: true,
     },
     paymentStatus: {
       type: String,
