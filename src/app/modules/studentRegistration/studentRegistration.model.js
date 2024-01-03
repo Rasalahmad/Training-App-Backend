@@ -46,7 +46,7 @@ const studentRegistrationSchema = new Schema(
       type: String,
       required: true,
     },
-    phoneNumber2: {
+    guardianNo: {
       type: String,
     },
     nidNo: {
