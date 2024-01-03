@@ -75,9 +75,9 @@ const studentRegistrationSchema = new Schema(
       ref: 'Batch',
       required: true,
     },
-    paymentStatus: {
+    registrationStatus: {
       type: String,
-      enum: ['pending', 'completed'],
+      enum: ['pending', 'continues', 'completed'],
       default: 'pending',
     },
     paid: {
