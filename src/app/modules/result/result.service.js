@@ -47,7 +47,9 @@ const getResult = async (filters, paginationOption) => {
   const result = await Result.find(whereCondition)
     .sort(sortConditions)
     .skip(skip)
-    .limit(limit);
+    .limit(limit)
+    .populate('courseName')
+    .populate('batchNo');
 
   const total = await Result.countDocuments(whereCondition);
 

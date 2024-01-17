@@ -3,11 +3,13 @@ import { Schema, model } from 'mongoose';
 const resultSchema = new Schema(
   {
     courseName: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: 'Course',
       required: true,
     },
     batchNo: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: 'Batch',
       required: true,
     },
     file: {
