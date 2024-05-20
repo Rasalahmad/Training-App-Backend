@@ -3,6 +3,12 @@ export const courseFilterableField = [
   'title',
   'desc',
   'instructor',
+  'courseType',
 ];
 
-export const courseSearchableField = ['title', 'desc', 'instructor'];
+export const courseSearchableField = [
+  'title',
+  'desc',
+  'instructor',
+  'courseType',
+];

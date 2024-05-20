@@ -21,6 +21,9 @@ const courseSchema = new Schema(
     duration: {
       type: String,
     },
+    courseType: {
+      type: String,
+    },
     image: {
       type: String,
     },
